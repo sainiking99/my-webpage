@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABHISHEK_portfolio</title>
+    <style type="text/css">
+        *{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    outline: none;
+    border: none;
+    font-family: 'Nova Square', sans-serif;;
+}
+body::-webkit-scrollbar{
+    width: 1rem;
+}
+body::-webkit-scrollbar-track{
+    background: var(--bg-color);
+}
+body::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+}
+:root{
+    --bg-color:rgb(61, 58, 58);
+    --main-color:#51074a;
+    --sec-bg-color:#d69cbc;
+}
+html{
+    font-size: 62%;
+    overflow-x: hidden;
+}
+body{
+    background:var(--sec-bg-color);
+}
+section{
+    min-height: 100vh;
+    width: 100%;
+    padding: 10rem 9% 2rem; 
+}
+.logo{
+    font-size: 4rem;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 1rem 9%;
+    background: var(--sec-bg-color);
+}
+header nav a{
+    font-size: 1.7rem;
+    margin-left: 4rem;
+    transition: .3s;
+}
+header nav a:hover{
+    color: var(--main-color);
+}
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9rem;
+}
+.img-1 img{
+    width: 20vw;
+}
+@keyframes anim{
+    0%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(-1.6rem);
+    }
+    50%{
+        transform: translateX(1.6rem);
+    }
+    75%{
+        transform: translateX(-1.6rem);
+    } 
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.home_content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+span{
+    color: var(--main-color);
+}
+ .home_content i{
+    color: var(--main-color);
+} 
+.home_content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.home_content p{
+    font-size: 1.4rem;
+    margin-top:7px;
+}
+.social a{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background:transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2.4rem;
+    margin: 2rem 1.5rem 2rem 0;
+    color: var(--main-color);
+    transition: 0.5s ease;
+}
+
+.social a:hover{
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+button{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: blue;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    border: none;
+}
+button:hover{
+    box-shadow: none;
+}
+#about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+    background: var(--bg-color);
+}
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+.about_content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+.about_content h3{
+    font-size: 2.6rem;
+}
+.about_content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem 0;
+}
+
+#service h2{
+    margin-bottom: 5rem;
+}
+.service_content{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.service_content .service_box{
+    flex: 1 1 30rem;
+    background:var(--bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+.service_content .service_box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.04);
+}
+.service_box h3{
+    font-size: 2.2rem;
+}
+.service_box p{
+    font-size: 1.2rem;
+    margin: 1rem .5rem 1.5rem;
+}
+
+.layout{
+    height: 30vh;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+.layout_content{
+    background:linear-gradient(rgba(0,0,0,.1),var(--main-color));
+    width: 100%;
+    height: 100%;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease;
+}
+.layout_content h3{
+    font-size: 2rem;
+    color: #292929;
+}
+.layout_content p{
+    font-size: 1.2rem;
+    color:#292929;
+    margin: .4rem;
+}
+
+.layout:hover .layout_content{
+    transform: translateY(-100%);
+}
+.image1{
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 1rem var(--bg-color);
+    transition: 0.5s ease;
+}
+.image1:hover{
+    transform: scale(1.08);
+
+}
+#portfolio{
+    background-color: var(--bg-color);
+}
+#portfolio h2{
+    margin-bottom: 3rem;
+}
+.portfolio_content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px, 300px));
+    align-items: center;
+    justify-items: center;
+    gap:2rem;
+}
+.contact_content h2{
+    margin-bottom: 3rem;
+}
+.service_box i{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color:var(--sec-bg-color);
+}
+.contact_content form{
+    max-width: 70%;
+    text-align: center;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+}
+.contact_content form .input1{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+input{
+    width: 49%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    background-color: var(--bg-color);
+    border-radius: 1rem;
+    margin: .5rem 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    background-color: var(--bg-color);
+    border-radius: 1rem;
+    margin: .5rem 0;
+    margin-bottom: 2rem;
+}
+.foot{display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:var(--bg-color);
+    font-size: 1.4rem;
+    padding: 1.5rem 9%;
+}
+.foot i{
+    display: inline-block;
+    padding: 1rem;
+    background: var(--main-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    transition: .5s ease;
+    border: none;
+}
+.foot i:hover{
+    box-shadow: none;
+}
+
+#menu {
+    display: none;
+    font-size: 2.5rem;
+}
+
+@media (max-width: 1080px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width: 768px){
+    #menu{
+        display: flex;
+    }
+
+    nav{
+        display: none;
+    }
+}
+
+@media(max-width: 480px){
+    #home{
+        display: flex;
+        flex-direction: column;
+    }
+    #about{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="logo">ABHISHEK</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#service">Service</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">contact</a>
+        </nav>
+        <i class='bx bx-menu' id="menu"></i>
+    </header>
+<section id="home">
+    <div class="home_content">
+        <h3>Hello,I'm</h3>
+        <h1>ABHISHEK KUMAR</h1>
+        <h3>and I'm a <span>Web Developer</span></h3>
+        <p>Web Developer where profound knowledge of HTML/HTML5, PHP, CSS/CSS3, Bootstrap,
+            TALWIND CSS, JavaScript/jQuery, AngularJS, AIAX, jQuery, MySQL, Apache, and other similar 
+            systems, and ability to effectively design, maintain, and manage enterprise level CMS solutions
+            will be applied.</p>
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="#"><i class='bx bxl-linkedin' ></i></a>
+            <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+        </div>
+        <button>Donwload CV</button>
+    </div>
+       <div class="img-1">
+        <img src="image\WhatsApp Image 2023-12-06 at 19.25.32_01e329f9.jpg"alt="">
+        </div>
+</section>
+<section id="about">
+    <div class="img-1">
+        <img src="image\WhatsApp Image 2023-12-07 at 20.22.01_fbaf7dc0.jpg" alt="">
+    </div>
+    <div class="about_content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>Web Developer</h3>
+        <p>A self-motivated IT professional with huge knowledge and proficiency in JavaScript, HTML,
+            CSS, and mobile responsive web development, as well as strong skills and ability in writing 
+            clean and efficient code, seeks the position of Front-End. Web Developer where profound
+            knowledge of HTML/HTML5, PHP, CSS/CSS3, Bootstrap, TALWIND CSS, JavaScript/jQuery, 
+            AngularJS, AJAX, jQuery,MySQL, Apache, and other similar systems, and ability to effectively
+            design, maintain, and manage enterprise level CMS solutions will be applied.</p>
+        <button>Read More</button>
+    </div>
+</section>
+<section id="service">
+    <h2 class="heading">Our <span>Service</span></h2>
+    <div class="service_content">
+        <div class="service_box">
+            <i class='bx bx-code-alt'></i>
+            <h3>Full Stack Developer</h3>
+            <p>We are proficient in working with various programming languages, frameworks, and technologies to build and maintain web applications</p>
+                <button>Read More</button>
+        </div>
+        <div class="service_box">
+            <i class='bx bxs-book'></i>
+            <h3>SME-Mathematics</h3>
+            <p>SMEs in Mathematics typically have a deep understanding of mathematical principles, theories, and applications across various branches, such as algebra</p>
+                <button>Read More</button>
+            </div>
+        <div class="service_box">
+            <i class='bx bx-pen' ></i>
+            <h3>Graphic Designer</h3>
+            <p>They use design principles, color theory, typography, and imagery to create visually appealing and effective designs for a wide...</p>
+                <button>Read More</button>
+            </div>
+        <div class="service_box">
+            <i class='bx bxl-php' ></i>
+            <h3>PHP Developer</h3>
+            <p>PHP syntax, functiores, and frameworkes such as Laravel, Symfony, or Codeigniter. We are skilled in srifting efficient and secure PHP code that interacts with</p>
+                <button>Read More</button>
+            </div>
+        <div class="service_box">
+            <i class='bx bxs-edit-alt' ></i>
+            <h3>Article Writer</h3>
+            <p>The primary role of an article writer is to produce well written, well-researched, and original articles that cater to the tagget audience and meet the requirements</p>
+                <button>Read More</button>
+            </div>
+    </div>
+</section>
+<section id="portfolio">
+    <h2 class="heading">Latest <span>Portfolio</span></h2>
+    <div class="portfolio_content">
+        <div class="layout">
+            <img class="image1" src="image\download (2).jpg" alt="">
+            <div class="layout_content">
+                <h3>Full Stack Developer</h3>
+                <p>We are proficient in working with various programming languages, frameworks, and technologies to build and maintain web applications</p>
+            </div>
+        </div>
+        <div class="layout">
+            <img class="image1" src="image\images (1).jpg" alt="">
+            <div class="layout_content">
+                <h3>SME-Mathematics</h3>
+                <p>SMEs in Mathematics typically have a deep understanding of mathematical principles, theories, and applications across various branches, such as algebra</p>
+            </div>
+        </div>
+        <div class="layout">
+            <img class="image1" src="image\images (2).jpg" alt="">
+            <div class="layout_content">
+                <h3>Graphic Designer</h3>
+                <p>They use design principles, color theory, typography, and imagery to create visually appealing and effective designs for a wide...</p>
+            </div>
+        </div>
+        <div class="layout">
+            <img class="image1" src="image\download.jpg" alt="">
+            <div class="layout_content">
+                <h3>PHP Developer</h3>
+                <p>PHP syntax, functiores, and frameworkes such as Laravel, Symfony, or Codeigniter. We are skilled in srifting efficient and secure PHP code that interacts with</p>
+            </div>
+        </div>
+        <div class="layout">
+            <img class="image1" src="image\download (1).jpg" alt="">
+            <div class="layout_content">
+                <h3>Article Writer</h3>
+                <p>The primary role of an article writer is to produce well written, well-researched, and original articles that cater to the tagget audience and meet the requirements</p>
+            </div>
+        </div>
+        <div class="layout">
+            <img class="image1" src="image\images.jpg" alt="">
+            <div class="layout_content">
+                hello web developer 
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <div class="contact_content">
+        <h2 class="heading">Contact <span>Me!!</span></h2>
+            <form action="">
+            <div class="input1">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="input1">
+                <input type="number" placeholder="Mobile Number">
+                <input type="text" placeholder="Subject">
+            </div>
+            <textarea name="text" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <button>Send Message</button>
+        </form>
+        </div>
+</section>
+<footer>
+<div class="foot">
+    <h4>Copyright 2023 by ABHISHEK | All Rigths Reserved</h4>
+    <a href="#home"><i class='bx bxs-to-top'></i></a>    
+</div>
+</footer>
+</body>
+</html>
